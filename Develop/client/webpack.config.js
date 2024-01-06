@@ -19,8 +19,8 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './src/index.html',
-        favicon: './src/favicon.ico',
+        template: './index.html',
+        favicon: './favicon.ico',
         chunks: ['main'],
       }),
       new WebpackPwaManifest({
@@ -31,18 +31,17 @@ module.exports = () => {
         theme_color: 'white',
         start_url: '/',
         publicPath: "/",
-        inject: true,
         display: 'standalone',
         icons: [
           {
-            src: path.resolve('/Develop/client/src/images/logo.png'),
+            src: path.resolve(__dirname,'src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             purpose: 'any maskable',
           },
         ],
       }),
       new InjectManifest({
-        swSrc: './src/sw.js', 
+        swSrc: './src-sw.js', 
         swDest: 'service-worker.js',
       }),
     ],
