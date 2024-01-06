@@ -16,7 +16,7 @@ butInstall.addEventListener('click', async () => {
 
     deferredPrompt.prompt();
 
-    const choiceResult = await deferredPrompt.prompt.userChoice;
+    const choiceResult = await deferredPrompt.userChoice;
 
     if (choiceResult.outcome === 'accepted') {
         console.log('User accepted installation');
