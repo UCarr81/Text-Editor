@@ -83,7 +83,7 @@ The following image shows the application's IndexedDB storage:
 This Challenge is graded based on the following criteria:
 
 ### Technical Acceptance Criteria: 40%
-
+asdasdas
 * Satisfies all of the above acceptance criteria plus the following:
 
   * Uses IndexedDB to create an object store and includes both GET and PUT methods
