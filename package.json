@@ -4,13 +4,14 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start:dev": "concurrently \"npm run server\" \"cd Develop/client && npm run dev\"",
-    "start": "npm run build && node server.js",
-    "server": "nodemon server.js --ignore Develop/client",
+    "start:dev": "concurrently \"cd Develop/server && npm run server\" \"cd Develop/client && npm run dev\"",
+    "start": "npm run build && cd Develop/server && node server.js",
+    "server": "cd Develop/server && nodemon server.js --ignore Develop/client",
     "build": "cd Develop/client && npm run build",
-    "install": "concurrently \"cd Develop/client && npm install\" \"npm install\" ",
+    "install": "concurrently \"cd Develop/client && npm install\" \"cd Develop/server && npm install\" ",
     "client": "cd Develop/client && npm start"
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
